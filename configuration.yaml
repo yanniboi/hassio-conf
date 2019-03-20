@@ -94,10 +94,12 @@ media_player:
     name: Living Room FireTV
     host: !secret living_room_firetv_host
     adb_server_ip: 127.0.0.1
-  - platform: alexa
-    email: !secret alexa_email
-    password: !secret alexa_password
-    url: "amazon.co.uk"
+
+alexa_media:
+  accounts:
+    - email: !secret alexa_email
+      password: !secret alexa_password
+      url: amazon.co.uk
 
 # MQTT Devices
 

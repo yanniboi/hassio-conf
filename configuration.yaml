@@ -76,6 +76,10 @@ panel_iframe:
     title: 'Configurator'
     icon: 'mdi:wrench'
     url: !secret configurator_base
+  tasmoadmin:
+    title: TasmoAdmin
+    icon: mdi:lightbulb-on
+    url: !secret tasmo_admin_base
 
 # Floorplan
 panel_custom:

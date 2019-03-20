@@ -32,7 +32,8 @@
         - name: Lights
           entities:
              - light.bedroom
-             - group.all_switches
+             - light.nursery
+#             - group.all_switches
           states:
             - state: 'on'
               class: 'light-on'

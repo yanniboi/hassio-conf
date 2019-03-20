@@ -1827,16 +1827,16 @@
        id="path9884"
        inkscape:connector-curvature="0" />
     <path
-       style="opacity:1;fill:#ff00ff;fill-opacity:0.07853406;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 215.33985,983.78124 V 848.81251 H 276.625 V 586.40234 H 224.64453 V 438.14062 h 62.16797 v -31.15624 l 90.66797,-80.33204 229.1836,0.88672 63.35156,66.7461 v 53.89844 h 85.05858 v 535.44921 z"
-       id="binary_sensor.room_master"
+       id="light.bedroom"
        inkscape:connector-curvature="0"
        inkscape:label="binary_sensor.room_master">
       <title
          id="title15893">Master Bedroom</title>
     </path>
     <path
-       style="fill:none;fill-opacity:0.07853406;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 216.375,1001.5 v 196.5508 h 92.58984 v 255.4687 h -72.21093 l 0.14843,148.7032 516.9883,-0.4454 0.29685,-600.4218 z"
        id="binary_sensor.room_spare"
        inkscape:connector-curvature="0"
@@ -1845,9 +1845,9 @@
          id="title16449">SpareRoom</title>
     </path>
     <path
-       style="fill:#ff00ff;fill-opacity:0.07853406;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 771.75781,1156.8516 291.35469,-0.2599 0.1453,445.0372 H 771.75781 Z"
-       id="binary_sensor.room_nursery"
+       id="light.nursery"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
        inkscape:label="binary_sensor.room_nursery">

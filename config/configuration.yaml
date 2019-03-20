@@ -5,19 +5,79 @@ homeassistant:
   elevation: !secret homeassistant_elevation
   unit_system: metric
   time_zone: Europe/London
-  customize: !include_dir_merge_named customize
-  packages: !include_dir_named packages
+  customize: !include customize.yaml
+#  packages: !include_dir_named packages
   auth_providers:
    - type: homeassistant
 
+# Show links to resources in log and frontend
+introduction:
+
+# Enables configuration UI
 config:
 
 http:
   base_url: !secret http_base_url
 
+# Enables the frontend
 frontend:
   javascript_version: latest
 
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Allow diagnosing system problems
+system_health:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+# Dark sky weather config.
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
+# Custom
+
+hive:
+  username: !secret hive_username
+  password: !secret hive_password
+
+panel_iframe:
+  configurator:
+    title: 'Configurator'
+    icon: 'mdi:wrench'
+    url: !secret configurator_base
+
+# Floorplan
 panel_custom:
   - name: floorplan
     sidebar_title: Floorplan
@@ -31,6 +91,25 @@ media_player:
     host: !secret living_room_firetv_host
     adbkey: "/config/android/adbkey"
 
+# MQTT Devices
+
+switch:
+    platform: mqtt
+    name: "Office light"
+    command_topic: "cmnd/sonoff/power"
+    state_topic: "stat/sonoff/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
 # Folder includes
+group: !include_dir_merge_named group
 device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+
+# File includes
+automation: !include automations.yaml
+script: !include scripts.yaml
+
 

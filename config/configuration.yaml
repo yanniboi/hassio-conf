@@ -24,3 +24,13 @@ panel_custom:
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
+
+media_player:
+  - platform: firetv
+    name: Living Room FireTV
+    host: !secret living_room_firetv_host
+    adbkey: "/config/android/adbkey"
+
+# Folder includes
+device_tracker: !include_dir_merge_list device_tracker
+

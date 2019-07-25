@@ -1,0 +1,48 @@
+esphome:
+  name: 'bt_bridge'
+  platform: ESP32
+  board: mhetesp32devkit
+wifi:
+  ssid: !secret home_wifi_ssid
+  password: !secret home_wifi_pass
+api:
+web_server:
+  port: 80
+logger:
+ota:
+  password: !secret esphome_bt_ota_pass
+# Enable Bluetooth scanning for this ESP32
+esp32_ble_tracker:
+
+sensor:
+  - platform: xiaomi_mijia
+    mac_address: !secret nursery_temp_mac
+    temperature:
+      name: "Nursery Temperature"
+    humidity:
+      name: "Nursery Humidity"
+    battery_level:
+      name: "Nursery Battery Level"
+  - platform: xiaomi_mijia
+    mac_address: !secret dining_temp_mac
+    temperature:
+      name: "Dining room Temperature"
+    humidity:
+      name: "Dining room Humidity"
+    battery_level:
+      name: "Dining room Battery Level"
+
+
+time:
+  - platform: homeassistant
+    on_time:
+      - seconds: 0
+        minutes: 0
+        hours: 4
+        days_of_week: MON-SUN
+        then:
+           - switch.toggle: restart_switch
+switch:
+  - platform: restart
+    name: "test_temperature Restart"
+    id: restart_switch

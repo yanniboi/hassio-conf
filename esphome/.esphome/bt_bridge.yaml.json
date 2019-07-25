@@ -1,0 +1,13 @@
+{
+  "arduino_version": null, 
+  "address": "bt_bridge.local", 
+  "storage_version": 1, 
+  "esphome_version": "1.13.6", 
+  "build_path": null, 
+  "name": "bt_bridge", 
+  "loaded_integrations": [], 
+  "firmware_bin_path": null, 
+  "board": "esp01_1m", 
+  "esp_platform": "ESP8266", 
+  "src_version": 1
+}

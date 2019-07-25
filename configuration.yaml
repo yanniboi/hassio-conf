@@ -10,14 +10,11 @@ homeassistant:
   auth_providers:
    - type: homeassistant
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables configuration UI
 config:
 
-http:
-  base_url: !secret http_base_url
+#http:
+#  base_url: !secret http_base_url
 
 # Enables the frontend
 frontend:
@@ -55,7 +52,7 @@ system_health:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
 
 # Cloud
 cloud:
@@ -89,17 +86,17 @@ panel_custom:
     url_path: floorplan
     config: !include floorplan.yaml
 
-media_player:
-  - platform: firetv
-    name: Living Room FireTV
-    host: !secret living_room_firetv_host
-    adb_server_ip: 127.0.0.1
+#media_player:
+#  - platform: firetv
+#    name: Living Room FireTV
+#    host: !secret living_room_firetv_host
+#    adb_server_ip: 127.0.0.1
 
-alexa_media:
-  accounts:
-    - email: !secret alexa_email
-      password: !secret alexa_password
-      url: amazon.co.uk
+#alexa_media:
+#  accounts:
+#    - email: !secret alexa_email
+#      password: !secret alexa_password
+#      url: amazon.co.uk
 
 # MQTT Devices
 

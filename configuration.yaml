@@ -110,6 +110,17 @@ switch:
     payload_off: "OFF"
     retain: true
 
+camera:
+  - platform: generic
+    name: Office
+    username: !secret camera1_user
+    password: !secret camera1_pass
+    authentication: basic
+    still_image_url: !secret camera1_pic_url
+    stream_source: !secret camera1_stream_url
+    verify_ssl: false
+    scan_interval: 10
+
 # Folder includes
 group: !include_dir_merge_named group
 device_tracker: !include_dir_merge_list device_tracker
